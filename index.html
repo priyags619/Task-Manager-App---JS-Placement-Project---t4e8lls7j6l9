@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/335f1ae8ba.js" crossorigin="anonymous"></script>
+    <title>Task Manager App</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+</head>
 
+<body>
+
+  <div class="overlay">
+    <div class="header">
+      <h1 id="form-title">Add Task</h1>
+      <button id= "close" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+      <form  class= "taskForm" id="task-Manager-form">
+        <div id="title" class="form-control">
+          <h4>TITLE</h4>
+          
+          <input type="text" class="taskInput" id="input-text" placeholder="Title" required>
+        
+        </div>
+        
+        <div  id="description" class="form-control">
+          <h4>DESCRIPTION</h4>
+          <textarea id="text-value" placeholder="Description" rows="5" required></textarea>
+        </div>
+        <div class="select form-control" >
+        <label for="label"><h4>LABELS</h4></label>
+        <select name="label" id="options" required>
+          <option value="" selected>select one</option>
+          <option value="start">start</option>
+          <option value="process">process</option>
+          <option value="review">in review</option>
+          <option value="done">done</option>
+        </select>
+      </div>
+        <div id="save-button" class="form-control">
+          <button  id="save-btn" value="save" type="submit">Save</button>
+        </div>
+      </form>
+  </div>
+
+    <div class="main">
+    
+      <div class="heading">
+        <h1>Task Manager App</h1>
+      </div>
+        <div class="task">
+            <button class="add" id="add-task">ADD TASK</button>
+        </div>
+        <br>
+      <div class="section">
+        <div class="grid-item start" id="start">OPEN</div>
+        <div class="grid-item process" id="process">IN PROGRESS</div>
+        <div class="grid-item review" id="review">IN REVIEW</div>
+        <div class="grid-item done" id="done">DONE
+          
+        </div>
+      </div>
+</div>
+<script src="App.js"></script>
+</body>
+</html>
